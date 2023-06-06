@@ -349,7 +349,7 @@ class MineField(tk.Frame):
     def field_scan(self) -> None:
         """
         Method for scan state of squares inside this minefield and decide is it nothing, win or lose.
-        Also, makes all adjoining squares to blank and 0 bombs count square unhidden.
+        Also, makes all adjoining squares to blank and 0 bombs count squares unhidden.
 
         :return: None.
         """
