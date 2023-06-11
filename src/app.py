@@ -29,22 +29,8 @@ class MineSweeperApplication(tk.Tk):
         """
         super().__init__(*args, **kwargs)
 
-        # load all application textures
-        self.textures = HandmadeTextures(
-            blank_hidden=tk.PhotoImage(file="./src/assets/textures/base_hidden.png"),
-            flag_hidden=tk.PhotoImage(file="./src/assets/textures/flag_hidden.png"),
-            blank_unhidden=tk.PhotoImage(file="./src/assets/textures/base_unhidden.png"),
-            one_unhidden=tk.PhotoImage(file="./src/assets/textures/1_unhidden.png"),
-            two_unhidden=tk.PhotoImage(file="./src/assets/textures/2_unhidden.png"),
-            three_unhidden=tk.PhotoImage(file="./src/assets/textures/3_unhidden.png"),
-            four_unhidden=tk.PhotoImage(file="./src/assets/textures/4_unhidden.png"),
-            five_unhidden=tk.PhotoImage(file="./src/assets/textures/5_unhidden.png"),
-            six_unhidden=tk.PhotoImage(file="./src/assets/textures/6_unhidden.png"),
-            seven_unhidden=tk.PhotoImage(file="./src/assets/textures/7_unhidden.png"),
-            eight_unhidden=tk.PhotoImage(file="./src/assets/textures/8_unhidden.png"),
-            bomb_unhidden=tk.PhotoImage(file="./src/assets/textures/bomb_unhidden.png"),
-            fail_bomb_unhidden=tk.PhotoImage(file="./src/assets/textures/fail_bomb_unhidden.png"),
-        )
+        # load all application textures in one dataclass object
+        self.textures = HandmadeTextures()
 
         # add title to the window
         self.wm_title("MineSweeper")
